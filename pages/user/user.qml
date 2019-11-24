@@ -10,7 +10,7 @@
         <text wx:if="{{!loggedIn}}">登录/注册</text>
     </view>
     <view wx:if="{{authorized}}" class="head-portrait-container head-portrait-btn">
-        <image class="head-portrait" src="{{userInfo.portrait}}" />
+        <image class="head-portrait" src="{{userInfo.headPortrait}}" />
         <text>{{userInfo.nickname}}</text>
     </view>
     <view class="about">

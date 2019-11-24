@@ -110,8 +110,8 @@ Page({
         if (res.code === 200) {
             if (res.data) {
                 setUserGlobalInfo(res.data, 1000 * 3600 * 24 * 7);
-                wx.navigateTo({
-                    url: '/pages/user/user?userInfo' + res.data
+                wx.switchTab({
+                    url: '/pages/user/user'
                 })
             } else {
                 wx.lin.showToast({
@@ -173,8 +173,9 @@ Page({
             const res = await userModel.register(nickname, headPortrait, this.data.phone, password)
             if (res) {
                 if (res.code === 200) {
-                    wx.navigateTo({
-                        url: '/pages/user/user?userInfo' + res.data
+                    setUserGlobalInfo(res.data, 1000 * 3600 * 24 * 7)
+                    wx.switchTab({
+                        url: '/pages/user/user'
                     })
                 } else {
                     this._showMessage('error', res.msg)

@@ -67,24 +67,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    // 如果有缓存读取缓存数据，隐藏授权按钮
-    const cacheUserInfo = getUserGlobalInfo()
-    if (cacheUserInfo) {
-      this.setData({
-        userInfo: cacheUserInfo,
-        authorized: true
-      })
-    } else {
-      // 1.首次加载 2.从登录注册页返回回来
-      const userInfo = options.userInfo;
-      if (userInfo) {
-        this.setData({
-          authorized: true,
-          userInfo
-        })
-        setUserGlobalInfo(userInfo, 1000 * 3600 * 24 * 7)
-      }
-    }
+
   },
 
   /**
@@ -98,10 +81,14 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    // const userInfo = getUserGlobalInfo()
-    // if (!userInfo) {
-    //   this.userAuthorized();
-    // }
+    // 如果有缓存读取缓存数据，隐藏授权按钮
+    const cacheUserInfo = getUserGlobalInfo()
+    if (cacheUserInfo) {
+      this.setData({
+        userInfo: cacheUserInfo,
+        authorized: true
+      })
+    }
   },
 
   /**
