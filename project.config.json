@@ -1,0 +1,100 @@
+{
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"enhance": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"coverView": true,
+		"nodeModules": true,
+		"autoAudits": false,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		},
+		"remoteDebugLogEnable": false,
+		"uglifyFileName": true,
+		"scriptsEnable": false
+	},
+	"qqLibVersion": "1.8.0",
+	"compileType": "miniprogram",
+	"projectname": "campus-qq",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"qqappid": "1109922453",
+	"scripts": {
+		"beforeCompile": "",
+		"beforePreview": "",
+		"beforeUpload": ""
+	},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"list": []
+		},
+		"gamePlugin": {
+			"current": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 0,
+			"list": [
+				{
+					"id": -1,
+					"name": "user",
+					"pathName": "pages/user/user",
+					"query": "",
+					"scene": ""
+				},
+				{
+					"id": -1,
+					"name": "message",
+					"pathName": "pages/message/message",
+					"query": "",
+					"scene": ""
+				},
+				{
+					"id": -1,
+					"name": "activity",
+					"pathName": "pages/activity/activity",
+					"query": "",
+					"scene": ""
+				},
+				{
+					"id": -1,
+					"name": "phone",
+					"pathName": "pages/phone/phone",
+					"query": "",
+					"scene": ""
+				},
+				{
+					"id": -1,
+					"name": "sms",
+					"pathName": "pages/sms/sms",
+					"query": "",
+					"scene": ""
+				}
+			]
+		}
+	}
+}

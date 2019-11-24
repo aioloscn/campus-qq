@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "l-button": "/miniprogram_npm/lin-ui/button/index",
+    "l-toast": "/miniprogram_npm/lin-ui/toast/index",
+    "l-message": "/miniprogram_npm/lin-ui/message/index",
+    "c-sms": "/pages/sms/sms"
+  }
+}

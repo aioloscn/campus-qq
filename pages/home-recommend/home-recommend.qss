@@ -1,0 +1,50 @@
+.container {
+    background-color: #f4f6f9;
+}
+
+.recommend-container {
+    background-color: #ffffff;
+    margin-bottom: 10rpx;
+}
+
+.content {
+    width: 690rpx;
+    padding: 0 30rpx;
+    font-size: 32rpx;
+    color: #000000;
+}
+
+.personal-container {
+    padding: 30rpx;
+}
+
+.tag-container {
+    width: 690rpx;
+    padding: 14rpx 30rpx;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.floor {
+    width: 690rpx;
+    height: 80rpx;
+    padding: 0 30rpx;
+    border-top: 1px solid #f4f6f9;
+}
+
+.position-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.position-img {
+    width: 46rpx;
+    height: 46rpx;
+    margin: 0 10rpx 0 30rpx;
+}
+.position {
+    font-size: 26rpx;
+    color: #000000;
+}

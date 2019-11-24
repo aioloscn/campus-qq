@@ -1,0 +1,53 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/activity/activity",
+    "pages/message/message",
+    "pages/user/user",
+    "pages/home-recommend/home-recommend",
+    "pages/hot/hot",
+    "pages/gossip/gossip",
+    "pages/home-activity/home-activity",
+    "pages/sms/sms",
+    "pages/phone/phone"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTitleText": "i校易点",
+    "navigationBarTextStyle": "black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "color": "#c7c7c7",
+    "selectedColor": "#fded8e",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "text": "首页",
+        "pagePath": "pages/home/home",
+        "iconPath": "/images/tab/home.png",
+        "selectedIconPath": "/images/tab/home-fill.png"
+      },
+      {
+        "text": "活动",
+        "pagePath": "pages/activity/activity",
+        "iconPath": "/images/tab/activity.png",
+        "selectedIconPath": "/images/tab/activity-fill.png"
+      },
+      {
+        "text": "消息",
+        "pagePath": "pages/message/message",
+        "iconPath": "/images/tab/message.png",
+        "selectedIconPath": "/images/tab/message-fill.png"
+      },
+      {
+        "text": "我的",
+        "pagePath": "pages/user/user",
+        "iconPath": "/images/tab/user.png",
+        "selectedIconPath": "/images/tab/user-fill.png"
+      }
+    ]
+  }
+}

@@ -1,0 +1,34 @@
+.container {
+    width: 100%;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+}
+
+.head-portrait {
+    width: 100rpx;
+    height: 100rpx;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+
+.message-top {
+    width: 590rpx;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.nickname {
+    color: #000000;
+    font-size: 36rpx;
+    font-weight: 600;
+    margin: 0 0 14rpx 30rpx;
+}
+
+.datetime {
+    margin-left: 30rpx;
+    width: 560rpx;
+    font-size: 26rpx;
+}

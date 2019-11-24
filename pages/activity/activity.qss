@@ -1,0 +1,93 @@
+.container {
+    background-color: #f4f6f9;
+}
+
+.article-container {
+    margin-top: 110rpx;
+    width: 690rpx;
+    background-color: #fbfbfb;
+    display: flex;
+    flex-direction: row;
+    padding: 30rpx;
+    flex-wrap: wrap;
+}
+
+.personal-container {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.head-portrait {
+    width: 50rpx;
+    height: 50rpx;
+    overflow: hidden;
+    border-radius: 50%;
+
+}
+
+.message-top {
+    width: 610rpx;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 20rpx;
+}
+
+.nickname {
+    color: #000000;
+    font-size: 26rpx;
+}
+
+.datetime {
+    font-size: 24rpx;
+}
+
+.content-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #ffffff;
+}
+
+.content {
+    max-height: 200rpx;
+    display: flex;
+    flex-direction: column;
+}
+
+.title-container {
+    width: 550rpx;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.title {
+    color: #000000;
+    font-size: 36rpx;
+    font-weight: 600;
+    margin-top: 20rpx;
+}
+
+.article {
+    width: 550rpx;
+    font-size: 26rpx;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.article-img {
+    width: 138rpx;
+    height: 138rpx;
+    border-radius: 5px;
+}
+
+.floor {
+    display: flex;
+    margin-bottom: 20rpx;
+    background-color: #ffffff;
+}

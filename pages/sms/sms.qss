@@ -1,0 +1,72 @@
+.container {
+    width: 670rpx;
+    padding: 0 40rpx;
+}
+
+.title {
+    margin: 80rpx 0 20rpx 0;
+    font-size: 46rpx;
+    font-weight: bold;
+    color: #636363;
+}
+
+.phone {
+    color: #898989;
+}
+
+.code-container {
+    width: 670rpx;
+    height: 80rpx;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 80rpx 0 20rpx 0;
+}
+
+.code {
+    border-bottom: 6rpx solid #dde7ee;
+    width: 90rpx;
+    text-align: center;
+}
+
+.hidden-input {
+    width: 0;
+    height: 0;
+}
+
+.password-container {
+    margin-top: 30rpx;
+}
+
+.input-container {
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    height: 68rpx;
+}
+
+.password {
+    width: 602rpx;
+}
+
+.cancel-img-view {
+    width: 68rpx;
+    height: 68rpx;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.cancel-img {
+    width: 28rpx;
+    height: 28rpx;
+    margin: 0 20rpx;
+}
+
+.input-bottom {
+    border: 1rpx solid #e5e5e5;
+    width: 670rpx;
+    margin: 20rpx 0 54rpx 0;
+}

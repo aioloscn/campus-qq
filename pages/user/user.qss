@@ -1,0 +1,113 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f4f6f9;
+}
+
+.bg {
+    width: 750rpx;
+    height: 458rpx;
+}
+
+.head-portrait-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.head-portrait-btn {
+    position: absolute !important;
+    top: 230rpx !important;
+}
+
+.head-portrait {
+    width: 120rpx;
+    height: 120rpx;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.follow-container {
+    padding: 0 100rpx;
+    width: 550rpx;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #ffffff;
+    top: 460rpx;
+}
+
+.text {
+    ont-size: 24rpx;
+    color: #999999;
+}
+
+.follows {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.fans-num {
+    font-size: 36rpx;
+}
+
+.about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f5f5f5;
+}
+
+.btn-container {
+    width: 750rpx;
+    margin-top: 10rpx;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background-color: #ffffff;
+}
+
+.btn {
+    width: 188rpx;
+    height: 160rpx;
+    font-size: 26rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid #f4f6f9;
+}
+
+.btn-img {
+    width: 60rpx;
+    height: 60rpx;
+}
+
+.record-img {
+    width: 50rpx;
+    height: 50rpx;
+    margin: 8rpx 0 12rpx 0;
+}
+
+.activity-manage-img {
+    width: 60rpx;
+    height: 60rpx;
+    margin-top: 4rpx;
+}
+
+.integral-img {
+    width: 60rpx;
+    height: 60rpx;
+    margin-top: 4rpx;
+}
+
+.setting-img {
+    width: 50rpx;
+    height: 50rpx;
+    margin: 0 0 10rpx 0;
+}

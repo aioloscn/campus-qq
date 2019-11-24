@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+    "c-fakeSearch": "/components/fakeSearch/index",
+    "c-search": "/components/search/index",
+    "c-thumbs-up": "/components/thumbs-up/index",
+    "c-comment": "/components/comment/index"
+  }
+}
