@@ -20,12 +20,12 @@ class HTTP {
                 'content-type': isParam ? 'application/x-www-form-urlencoded' : 'application/json',
             },
             success: (res) => {
-                const code = res.statusCode.toString();
+                const code = res.cdoe ? res.code.toString() : (res.statusCode ? res.statusCode.toString() : '0');
                 if (code === '200') {
                     resolve(res.data);
                 } else {
                     reject();
-                    const error_msg = res.data.msg;
+                    const error_msg = res.data ? res.data.msg : '';
                     this._show_error(error_msg);
                 }
             },

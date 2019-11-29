@@ -1,5 +1,5 @@
 <view bind:tap="onFollow" wx:if="{{!followed}}" class="container">
-    <image class="add-icon" src="/images/icon/add.png" />
+    <image class="add-icon" src="/images/icon/add2.png" />
     <text>关注</text>
 </view>
 

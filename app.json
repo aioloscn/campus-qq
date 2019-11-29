@@ -9,13 +9,15 @@
     "pages/gossip/gossip",
     "pages/home-activity/home-activity",
     "pages/sms/sms",
-    "pages/phone/phone"
+    "pages/phone/phone",
+    "pages/release/release"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#ffffff",
     "navigationBarTitleText": "i校易点",
-    "navigationBarTextStyle": "black"
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": false
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json",

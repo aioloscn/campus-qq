@@ -39,6 +39,17 @@ class UserModel extends HTTP {
             method: 'POST'
         })
     }
+
+    login(telphone, password) {
+        return this.cRequest({
+            url: 'user/login',
+            data: {
+                telphone: telphone,
+                password: password
+            },
+            method: 'POST'
+        })
+    }
 }
 
 export {UserModel}

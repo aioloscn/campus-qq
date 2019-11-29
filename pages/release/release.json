@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "l-textarea": "/miniprogram_npm/lin-ui/textarea/index",
+    "l-tag": "/miniprogram_npm/lin-ui/tag/index",
+    "city-picker": "/mini-program-components/city-picker/city-picker",
+    "l-image-picker": "/miniprogram_npm/lin-ui/image-picker/index"
+  },
+  "navigationBarTitleText": "发布短消息"
+}

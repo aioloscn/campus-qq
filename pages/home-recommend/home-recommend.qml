@@ -1,22 +1,23 @@
 <view class="container">
-    <view class="recommend-container">
+    <view class="recommend-container" wx:key="{{index}}" wx:for="{{information}}">
         <view class="personal-container">
-            <c-personal url="{{url[0]}}" nickname="{{nickname[0]}}" datetime="{{datetime[0]}}" />
+            <c-personal url="{{item.headPortrait}}" nickname="{{item.nickname}}" datetime="{{item.gmtCreate}}" bind:cancelFollow="cancelFollow" />
         </view>
         <view class="content">
-            <text>跑腿任务：快递</text>
+            <text>{{item.content}}</text>
         </view>
         <view class="tag-container">
             <l-tag plain="{{true}}" shape="circle" font-color="#4983d0">跑腿</l-tag>
             <view class="position-container">
                 <image class="position-img" src="/images/icon/position.png" />
-                <text class="position">成都市金堂县</text>
+                <text class="position">{{item.province}}{{item.city}}{{item.county}}</text>
             </view>
         </view>
         <view class="floor">
-            <c-floor commentNums="{{2}}" />
+            <c-floor praisedNums="{{item.thumbsUpNums}}" commentNums="{{item.commentNums}}" forwardNums="{{0}}" />
         </view>
     </view>
+    <text pages="{{pages}}"></text>
     <view class="recommend-container">
         <view class="personal-container">
             <c-personal url="{{url[1]}}" nickname="{{nickname[1]}}" datetime="{{datetime[1]}}" />
@@ -42,4 +43,5 @@
             <c-floor commentNums="{{5}}" />
         </view>
     </view>
+    <l-toast />
 </view>

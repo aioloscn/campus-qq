@@ -45,7 +45,7 @@
                 <image class="integral-img" src="/images/icon/integral.png" />
                 <text>积分</text>
             </view>
-            <view class="btn">
+            <view class="btn" bind:tap="onSetting">
                 <image class="setting-img" src="/images/icon/setting.png" />
                 <text>设置</text>
             </view>

@@ -106,7 +106,7 @@
     width: 630rpx;
 }
 
-.tags c-tag {
+.tags l-tag {
     margin-right: 20rpx;
     margin-bottom: 20rpx;
 }

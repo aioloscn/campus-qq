@@ -1,7 +1,9 @@
 Component({
 
     properties: {
-        commentNums: Number
+        praisedNums: Number,
+        commentNums: Number,
+        forwardNums: Number
     },
 
     data: {

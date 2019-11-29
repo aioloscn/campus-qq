@@ -73,16 +73,20 @@ Page({
         this.setData({
             loading: false
         })
-        if (res.code == 200) {
-            this._showMessage('success', res.msg)
-            this.setData({
-                resend: true,
-                second: 10
-            })
-            const _this = this;
-            this.countDown(_this)
+        if (res) {
+            if (res.code == 200) {
+                this._showMessage('success', res.msg)
+                this.setData({
+                    resend: true,
+                    second: 10
+                })
+                const _this = this;
+                this.countDown(_this)
+            } else {
+                this._showMessage('error', res.msg)
+            }
         } else {
-            this._showMessage('error', res.msg)
+            this._showMessage('error', '发送验证码失败')
         }
     },
 
@@ -107,39 +111,55 @@ Page({
             mask: true
         })
         const res = await userModel.loginOrRegister(phone, code)
-        if (res.code === 200) {
-            if (res.data) {
-                setUserGlobalInfo(res.data, 1000 * 3600 * 24 * 7);
-                wx.switchTab({
-                    url: '/pages/user/user'
-                })
+        if (res) {
+            if (res.code === 200) {
+                if (res.data) {
+                    setUserGlobalInfo(res.data, 1000 * 3600 * 24 * 7);
+                    wx.switchTab({
+                        url: '/pages/user/user'
+                    })
+                } else {
+                    wx.lin.showToast({
+                        title: '第一次注册，请输入密码完成创建',
+                        duration: 2500
+                    })
+                    this.setData({
+                        registered: true
+                    })
+                }
             } else {
-                wx.lin.showToast({
-                    title: '第一次注册，请输入密码完成创建',
-                    duration: 2500
-                })
-                this.setData({
-                    registered: true
-                })
+                this._showMessage('error', res.msg)
             }
         } else {
-            this._showMessage('error', res.msg)
+            this._showMessage('error', '连接服务器失败')
         }
         wx.hideLoading();
     },
 
     inputPwd(event) {
+        const val = event.detail.value
         this.setData({
             disabled1: false,
-            password: event.detail.value
+            password: val
         })
+        if (val === '') {
+            this.setData({
+                disable1: true
+            })
+        }
     },
 
     inputConfirmPwd(event) {
+        const val = event.detail.value
         this.setData({
             disabled2: false,
-            confirmPassword: event.detail.value
+            confirmPassword: val
         })
+        if (val === '') {
+            this.setData({
+                disabled: true
+            })
+        }
     },
 
     deletePwd(event) {

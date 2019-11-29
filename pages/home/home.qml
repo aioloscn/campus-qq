@@ -1,7 +1,7 @@
-<l-tabs bind:linchange="changeTabs" animated="true" class="container">
+<l-tabs bind:linchange="changeTabs" animated="true" class="container" >
     <l-tabpanel tab="推荐" key="one" slot="one">
         <view class="tab-content">
-            <c-home-recommend />
+            <c-home-recommend information="{{information}}" pages="{{pages}}" />
         </view>
     </l-tabpanel>
     <l-tabpanel tab="热门" key="two" slot="two">
@@ -20,3 +20,6 @@
         </view>
     </l-tabpanel>
 </l-tabs>
+<c-suspensionBall bind:tapReleaseBtn="tapReleaseBtn" ball-class="ball-container" buttonTop="{{buttonTop}}" buttonLeft="{{buttonLeft}}" windowWidth="{{windowWidth}}" windowHeight="{{windowHeight}}" isHidden="{{isHidden}}">
+    <image slot="img" class="img" src="/images/icon/menu-add.png" />
+</c-suspensionBall>

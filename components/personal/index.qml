@@ -3,7 +3,7 @@
     <view>
         <view class="message-top">
             <text class="nickname">{{nickname}}</text>
-            <c-follow />
+            <c-follow bind:cancelFollow="cancelFollow" />
         </view>
         <view class="datetime">
             <text>{{datetime}}</text>

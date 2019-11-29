@@ -63,6 +63,10 @@ const getGlobalInfo = function (k) {
   else return null
 }
 
+const removeGlobaInfo = function (k) {
+  wx.removeStorageSync(k)
+}
+
 /**
  * 保存用户的全局对象
  * @param v 用户对象数据
@@ -84,11 +88,17 @@ const getUserGlobalInfo = function () {
   return null
 }
 
+const removeUserGlobalInfo = function () {
+  removeGlobaInfo('userInfo')
+};
+
 export {
     random,
     cPromise,
     setGlobalInfo,
     getGlobalInfo,
+    removeGlobaInfo,
     setUserGlobalInfo,
-    getUserGlobalInfo
+    getUserGlobalInfo,
+    removeUserGlobalInfo
 }

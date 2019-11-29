@@ -44,3 +44,18 @@
 .btn {
     margin-bottom: 30rpx;
 }
+
+.password-container {
+    margin-top: 30rpx;
+}
+
+.input-container {
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    height: 68rpx;
+}
+
+.account, .password {
+    width: 602rpx;
+}

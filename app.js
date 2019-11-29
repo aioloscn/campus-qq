@@ -32,6 +32,18 @@ App({
         }
       }
     })
+
+    if (!wx.getStorageSync('citys')) {
+      wx.request({
+        url: "http://restapi.amap.com/v3/config/district?&subdistrict=3&key=2f29b679eba11302e2efbbdad571743d",
+        method: "GET",
+        success: function (res) {
+          console.log(res['data']['districts'][0]['districts']);
+          //  请求到数据 存在本地
+          wx.setStorageSync('citys', res['data']['districts'][0]['districts']);
+        }
+      })
+    }
   },
   globalData: {
     userInfo: null

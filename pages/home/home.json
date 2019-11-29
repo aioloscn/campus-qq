@@ -6,6 +6,7 @@
     "c-home-recommend": "/pages/home-recommend/home-recommend",
     "c-hot": "/pages/hot/hot",
     "c-gossip": "/pages/gossip/gossip",
-    "c-home-activity": "/pages/home-activity/home-activity"
+    "c-home-activity": "/pages/home-activity/home-activity",
+    "c-suspensionBall": "/components/suspensionBall/index"
   }
 }

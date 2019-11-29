@@ -19,6 +19,7 @@ Component({
             this.setData({
                 followed: false
             })
+            this.triggerEvent('cancelFollow', {}, {})
         }
     }
 })

@@ -6,8 +6,8 @@
 }
 
 .thumbs-up-img {
-    width: 50rpx;
-    height: 50rpx;
+    width: 40rpx;
+    height: 40rpx;
     margin-right: 10rpx;
 }
 
@@ -30,12 +30,12 @@
 }
 
 .comment-img {
-    width: 58rpx;
-    height: 58rpx;
+    width: 48rpx;
+    height: 48rpx;
     margin-right: 10rpx;
 }
 
-.share {
+.forward {
     width: 360rpx;
     height: 60rpx;
     display: flex;
@@ -44,8 +44,13 @@
     justify-content: center;
 }
 
-.share-img {
-    width: 46rpx;
-    height: 46rpx;
+.forward-img {
+    width: 50rpx;
+    height: 42rpx;
     margin-right: 10rpx;
+}
+
+.container text {
+    color: #6b6b6b;
+    font-size: 30rpx;
 }

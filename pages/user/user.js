@@ -2,7 +2,8 @@ import {
   cPromise,
   setGlobalInfo,
   setUserGlobalInfo,
-  getUserGlobalInfo
+  getUserGlobalInfo,
+  removeUserGlobalInfo
 } from "../../utils/common.js"
 import {
   UserModel
@@ -61,6 +62,10 @@ Page({
         userInfo
       })
     }
+  },
+
+  onSetting(event) {
+    removeUserGlobalInfo()
   },
 
   /**

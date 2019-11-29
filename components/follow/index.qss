@@ -1,32 +1,32 @@
 .container {
-    width: 110rpx;
+    width: 90rpx;
     height: 60rpx;
     padding: 0 30rpx 0 20rpx;
-    color: #78caf5;
+    color: #4983d0;
     font-size: 28rpx;
-    font-weight: 600;
-    border: 1px solid #78caf5;
-    border-radius: 3px;
+    border-radius: 30px;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    background-color: #f3f3f3;
 }
 
 .followed-container {
-    width: 160rpx;
+    width: 90rpx;
     height: 60rpx;
-    color: #78caf5;
+    padding: 0 30rpx 0 20rpx;
+    color: #4983d0;
     font-size: 28rpx;
-    font-weight: 600;
-    border: 1px solid #78caf5;
+    border-radius: 30px;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    background-color: #f3f3f3;
 }
 
 .add-icon {
-    width: 40rpx;
-    height: 40rpx;
+    width: 28rpx;
+    height: 28rpx;
 }
