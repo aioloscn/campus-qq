@@ -91,45 +91,45 @@ Page({
         const county = this.data.county
         console.log(content)
         console.log(images)
-        if (content.length > 0 || images.length > 0) {
-            const user = getUserGlobalInfo()
+        if (content !== '' || images.length > 0) {
+            const user = getUserGlobalInfo();
             if (user && user.id && user.nickname && user.headPortrait) {
                 const res = await informationModel.submitInformationContent(user.id, user.nickname, user.headPortrait, content, topicId, province, city, county);
                 if (images != []) {
                     if (res && res.code === 200 && res.data) {
                         console.log(images.length)
-                        const failCount = await informationModel.releaseInformationImages(res.data, images, images.length, 0, 0, 0);
-                        if (failCount > 0) {
-                            wx.showToast({
-                                title: failCount + '张图片上传失败',
-                                icon: 'error',
-                                duration: 2500
-                            })
+                        const informationId = res.data
+                        const failCount = await informationModel.releaseInformationImages(informationId, images, images.length, 0, 0, 0);
+                        if (failCount == 500) {
+                            this._showToast('暂时不支持GIF格式的图片😿', 'error')
+                            informationModel.deleteInformation(informationId)
+                        } else if (failCount > 0) {
+                            this._showToast('张图片上传失败', 'error');
                         } else {
-                            wx.showToast({
+                            wx.hideLoading();
+                            wx.lin.showToast({
+                                mask: true,
                                 title: '已发布',
                                 icon: 'success',
                                 duration: 2000,
-                                success(res) {
+                                success: (res) => {
                                     setTimeout(function () {
                                         wx.navigateBack({
                                             delta: 2
                                         })
-                                    }, 2000)
+                                    }, 100)
                                 }
-                            })
+                            });
                         }
                     } else {
-                        wx.showToast({
-                            'title': res.msg,
-                            icon: 'error',
-                            duration: 2500
-                        })
+                        this._showToast(res.msg, 'error')
                     }
                 } else {
                     if (res && res.code === 200) {
-                        wx.showToast({
-                            'title': res.msg,
+                        wx.hideLoading()
+                        wx.lin.showToast({
+                            mask: true,
+                            title: res.msg,
                             'icon': 'success',
                             duration: 2000,
                             success(res) {
@@ -137,24 +137,18 @@ Page({
                                     wx.navigateBack({
                                         delta: 2
                                     })
-                                }, 2000)
+                                }, 100)
                             }
                         })
                     } else {
-                        wx.showToast({
-                            'title': re.msg,
-                            icon: 'error',
-                            duration: 2500
-                        })
+                        this._showToast(res.msg, 'error')
                     }
                 }
             } else {
-                wx.showToast({
-                    'title': '登录信息已失效，请重新登录',
-                    icon: 'error',
-                    duration: 2500
-                })
+                this._showToast('登录信息已失效，请重新登录', 'error')
             }
+        } else {
+            this._showToast('发生了什么？', 'error')
         }
     },
 
@@ -183,6 +177,16 @@ Page({
         } else {
             this.data.imgUrls = []
         }
+    },
+
+    _showToast(title, icon) {
+        wx.hideLoading()
+        wx.lin.showToast({
+            mask: true,
+            title,
+            icon,
+            duration: 2500
+        })
     },
 
     /**

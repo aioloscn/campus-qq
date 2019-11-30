@@ -29,18 +29,22 @@ class InformationModel extends HTTP {
         for (let i = 0; i < length; i++) {
             const suffix = images[count].substring(images[count].lastIndexOf('.'))
             console.log("suffix: " + suffix)
-            let content = await wx.getFileSystemManager().readFileSync(images[count], 'base64')
+            if (suffix == '.gif') {
+                return 500;
+            }
+            let content = await wx.getFileSystemManager().readFileSync(images[count], 'base64');
             let dataPrix = 'data:image/png;base64,'
             if (suffix) {
-                if (suffix == 'jpeg' || suffix == 'jpg') {
+                if (suffix == '.jpeg' || suffix == '.jpg') {
                     dataPrix = 'data:image/jpeg;base64,'
-                } else if (suffix == 'ico' || suffix == 'ico') {
+                } else if (suffix == '.ico') {
                     dataPrix = 'data:image/x-icon;base64,'
-                } else if (suffix == 'gif') {
+                } else if (suffix == '.gif') {
                     dataPrix = 'data:image/gif;base64,'
                 }
                 content = dataPrix + content
             }
+            console.log(content)
             const res = await this.uploadImage(informationId, content);
             if (res && res.code === 200) {
                 successCount++
@@ -64,9 +68,40 @@ class InformationModel extends HTTP {
         })
     }
 
-    getInformation(pageIndex, topic=0) {
+    deleteInformation(informationId) {
         return this.cRequest({
-            url: `information/get?topic=${topic}&pageIndex=${pageIndex}`
+            url: 'information/delete/' + informationId,
+            method: 'DELETE',
+            isParam: true
+        })
+    }
+
+    getInformation(pageIndex, topicId, userId) {
+        return this.cRequest({
+            url: `information/get?topicId=${topicId}&userId=${userId}&pageIndex=${pageIndex}`,
+            isParam: true
+        })
+    }
+
+    thumbsUp(informationId, fromUid) {
+        return this.cRequest({
+            url: 'information/thumbsUp',
+            data: {
+                informationId: informationId,
+                fromUid: fromUid
+            },
+            method: 'POST'
+        })
+    }
+
+    cancelThumbsUp(informationId, fromUid) {
+        return this.cRequest({
+            url: 'information/thumbsUp/cancel',
+            data: {
+                informationId: informationId,
+                fromUid: fromUid
+            },
+            method: 'DELETE'
         })
     }
 }

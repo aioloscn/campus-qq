@@ -47,7 +47,7 @@ Page({
                 if (res.code == 200) {
                     wx.navigateTo({
                         url: '/pages/sms/sms?phone=' + this.data.phoneNumber
-                    });
+                    })
                 } else {
                     this._showMessage('error', res.msg)
                 }

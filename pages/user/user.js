@@ -65,7 +65,7 @@ Page({
   },
 
   onSetting(event) {
-    removeUserGlobalInfo()
+
   },
 
   /**

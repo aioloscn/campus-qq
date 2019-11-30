@@ -1,27 +1,27 @@
 Component({
 
     properties: {
-        praiseNums: Number
+        thumbsUpNum: Number
     },
 
     data: {
         praised: false,
-        nums: 0
+        num: 0
     },
 
     methods: {
         onPraise(event) {
-            const nums = this.properties.praiseNums + 1
+            const num = this.properties.thumbsUpNum + 1
             this.setData({
                 praised: true,
-                nums
+                num
             })
         },
         cancelPraised(event) {
-            const nums = this.properties.praiseNums - 1
+            const num = this.properties.thumbsUpNum - 1
             this.setData({
                 praised: false,
-                nums
+                num
             })
         }
     }

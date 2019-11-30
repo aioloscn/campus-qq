@@ -24,4 +24,5 @@
     <view wx:if="{{openCityPicker}}" class="city-picker">
         <city-picker bind:selected="selectCity"></city-picker>
     </view>
+    <l-toast />
 </view>

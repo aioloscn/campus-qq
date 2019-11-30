@@ -3,10 +3,11 @@
   "usingComponents": {
     "l-tabs": "/miniprogram_npm/lin-ui/tabs/index",
     "l-tabpanel": "/miniprogram_npm/lin-ui/tabpanel/index",
-    "c-home-recommend": "/pages/home-recommend/home-recommend",
-    "c-hot": "/pages/hot/hot",
-    "c-gossip": "/pages/gossip/gossip",
-    "c-home-activity": "/pages/home-activity/home-activity",
-    "c-suspensionBall": "/components/suspensionBall/index"
+    "c-home-recommend": "/components/home-recommend/index",
+    "c-hot": "/components/hot/index",
+    "c-gossip": "/components/gossip/index",
+    "c-home-activity": "/components/home-activity/index",
+    "c-suspensionBall": "/components/suspensionBall/index",
+    "l-toast": "/miniprogram_npm/lin-ui/toast/index"
   }
 }

@@ -10,7 +10,7 @@
     height: 36rpx;
 }
 
-.nums {
+.num {
     font-size: 26rpx;
     margin-left: 12rpx;
 }

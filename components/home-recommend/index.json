@@ -4,6 +4,7 @@
     "c-personal": "/components/personal/index",
     "l-tag": "/miniprogram_npm/lin-ui/tag/index",
     "c-floor": "/components/floor/index",
-    "l-toast": "/miniprogram_npm/lin-ui/toast/index"
+    "l-toast": "/miniprogram_npm/lin-ui/toast/index",
+    "l-loading": "/miniprogram_npm/lin-ui/loading/index"
   }
 }

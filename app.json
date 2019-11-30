@@ -4,13 +4,10 @@
     "pages/activity/activity",
     "pages/message/message",
     "pages/user/user",
-    "pages/home-recommend/home-recommend",
-    "pages/hot/hot",
-    "pages/gossip/gossip",
-    "pages/home-activity/home-activity",
     "pages/sms/sms",
     "pages/phone/phone",
-    "pages/release/release"
+    "pages/release/release",
+    "pages/information-detail/information-detail"
   ],
   "window": {
     "backgroundTextStyle": "light",

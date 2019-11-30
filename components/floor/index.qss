@@ -54,3 +54,13 @@
     color: #6b6b6b;
     font-size: 30rpx;
 }
+
+.share-btn {
+    width: 50rpx;
+    height: 42rpx;
+}
+
+.share {
+    width: 50rpx;
+    height: 42rpx;
+}

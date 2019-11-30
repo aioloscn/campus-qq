@@ -10,7 +10,7 @@
             <l-tag plain="{{true}}" shape="circle" font-color="#4983d0">树洞一下</l-tag>
         </view>
         <view class="floor">
-            <c-floor commentNums="{{3}}"/>
+            <c-floor commentNum="{{3}}"/>
         </view>
     </view>
 </view>

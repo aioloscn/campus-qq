@@ -50,6 +50,33 @@ class UserModel extends HTTP {
             method: 'POST'
         })
     }
+
+    /**
+     * 关注用户
+     * @param followUid 被关注者ID
+     * @param concernUid 关注者ID
+     */
+    follow(followUid, concernUid) {
+        return this.cRequest({
+            url: 'user/follow',
+            data: {
+                followUid: followUid,
+                concernUid: concernUid
+            },
+            method: 'POST'
+        })
+    }
+
+    cancelFollow(followUid, concernUid) {
+        return this.cRequest({
+            url: 'user/follow/cancel',
+            data: {
+                followUid: followUid,
+                concernUid: concernUid
+            },
+            method: 'DELETE'
+        })
+    }
 }
 
 export {UserModel}

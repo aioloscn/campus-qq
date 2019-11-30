@@ -1,18 +1,42 @@
+import {
+    getGlobalInfo,
+    getUserGlobalInfo
+} from "../../utils/common.js"
+
 Page({
 
-    /**
-     * 页面的初始数据
-     */
     data: {
-        url: ["/images/logo/campus-logo.png", "/images/user/campus-bg.png", "/images/user/campus-bg1.png"],
-        nickname: ["囡囡", "热忱", "Aiolos"],
-        datetime: ["20:35", "22:31", "00:50"]
+        item: null,
+        currentUserId: Number,
+        posting: false
+    },
+
+    onFakePost(event) {
+        this.setData({
+            posting: true
+        })
     },
 
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
+        const item = getGlobalInfo('information-detail')
+        console.log(item)
+        if (item) {
+            this.setData({
+                item
+            })
+        }
+        const userInfo = getUserGlobalInfo()
+        if (userInfo) {
+            this.setData({
+                currentUserId: userInfo.id
+            })
+        }
+    },
+
+    onPageScroll: function (e) {
 
     },
 

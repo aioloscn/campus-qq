@@ -16,11 +16,11 @@
     <view class="about">
         <view class="follow-container">
             <view class="follows">
-                <text class="nums">5</text>
+                <text class="num">{{userInfo.follows}}</text>
                 <text class="text">关注</text>
             </view>
             <view class="follows">
-                <text class="nums">1</text>
+                <text class="num">{{userInfo.concerns}}</text>
                 <text class="text">粉丝</text>
             </view>
         </view>

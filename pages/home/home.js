@@ -1,6 +1,9 @@
 import {
   InformationModel
 } from "../../models/imformation.js"
+import {
+  getUserGlobalInfo
+} from "../../utils/common.js"
 
 const regeneratorRuntime = require('../../utils/runtime.js')
 const informationModel = new InformationModel()
@@ -13,6 +16,7 @@ Page({
   data: {
     information: {},
     pages: 0,
+    currentUserId: -1,
     pageIndex: 0,
     buttonTop: 0,
     buttonLeft: 0,
@@ -29,13 +33,26 @@ Page({
   },
 
   async getInformation() {
-    const res = await informationModel.getInformation(this.data.pageIndex)
+    let userId = 0
+    const userInfo = getUserGlobalInfo()
+    if (userInfo)
+      userId = userInfo.id
+    const res = await informationModel.getInformation(this.data.pageIndex, 0, userId)
     if (res && res.code === 200 && res.data) {
       this.setData({
-        informationModel: res.data.obj,
+        information: res.data.obj,
         pages: res.data.pages
       })
+      // 如果已登录传当前用户ID到follow组件中动态控制显示
+      // 如果没登录，当用户点击关注时提示登录
+      const userInfo = getUserGlobalInfo()
+      if (userInfo) {
+        this.setData({
+          currentUserId: userInfo.id
+        })
+      }
     }
+    console.log(this.data.information)
   },
 
   /**

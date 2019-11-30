@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "c-personal": "/components/personal/index",
+    "l-tag": "/miniprogram_npm/lin-ui/tag/index",
+    "c-thumbs-up": "/components/thumbs-up/index"
+  }
+}

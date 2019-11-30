@@ -3,7 +3,7 @@
     <view>
         <view class="message-top">
             <text class="nickname">{{nickname}}</text>
-            <c-follow bind:cancelFollow="cancelFollow" />
+            <c-follow wx:if="{{!oneself}}" followed="{{followed}}" fromUid="{{fromUid}}" currentUserId="{{currentUserId}}" />
         </view>
         <view class="datetime">
             <text>{{datetime}}</text>

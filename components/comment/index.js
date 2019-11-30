@@ -1,7 +1,7 @@
 Component({
 
     properties: {
-        commentNums: Number
+        commentNum: Number
     },
 
     data: {

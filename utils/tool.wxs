@@ -1,0 +1,7 @@
+var oneself = function (currentUserId, fromUid) {
+    return currentUserId && fromUid && currentUserId == fromUid
+}
+
+module.exports = {
+    oneself: oneself
+}

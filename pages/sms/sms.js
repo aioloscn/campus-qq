@@ -65,6 +65,14 @@ Page({
         }
     },
 
+    firstLoading() {
+        this.setData({
+            resend: true
+        })
+        const _this = this
+        this.countDown(_this)
+    },
+
     async resend(event) {
         this.setData({
             loading: true
@@ -78,7 +86,7 @@ Page({
                 this._showMessage('success', res.msg)
                 this.setData({
                     resend: true,
-                    second: 10
+                    second: 60
                 })
                 const _this = this;
                 this.countDown(_this)
@@ -114,7 +122,7 @@ Page({
         if (res) {
             if (res.code === 200) {
                 if (res.data) {
-                    setUserGlobalInfo(res.data, 1000 * 3600 * 24 * 7);
+                    setUserGlobalInfo(res.data, 1000 * 3600 * 24 * 7)
                     wx.switchTab({
                         url: '/pages/user/user'
                     })
@@ -227,6 +235,7 @@ Page({
                 phone,
                 phoneNumber: phone.substring(phone.length - 4)
             })
+            this.firstLoading()
         }
     },
 

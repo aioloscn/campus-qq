@@ -1,6 +1,6 @@
 {
   "component": true,
   "usingComponents": {
-
+    "l-toast": "/miniprogram_npm/lin-ui/toast/index"
   }
 }

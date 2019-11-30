@@ -16,7 +16,7 @@
     width: 90rpx;
     height: 60rpx;
     padding: 0 30rpx 0 20rpx;
-    color: #4983d0;
+    color: #d03941;
     font-size: 28rpx;
     border-radius: 30px;
     display: flex;

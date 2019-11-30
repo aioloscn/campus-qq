@@ -3,7 +3,11 @@ Component({
     properties: {
         url: String,
         nickname: String,
-        datetime: String
+        datetime: String,
+        oneself: Boolean,
+        currentUserId: Number,
+        followed: Boolean,
+        fromUid: Number
     },
 
     data: {
@@ -11,8 +15,6 @@ Component({
     },
 
     methods: {
-        cancelFollow(event) {
-            this.triggerEvent('cancelFollow', {}, {})
-        },
+
     }
 })

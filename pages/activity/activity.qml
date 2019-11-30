@@ -23,8 +23,8 @@
                 <image class="article-img" src="/images/user/article.png" />
             </view>
             <view class="floor">
-                <c-thumbs-up praiseNums="{{18}}" />
-                <c-comment commentNums="{{22}}" />
+                <c-thumbs-up praiseNum="{{18}}" />
+                <c-comment commentNum="{{22}}" />
             </view>
         </view>
         <view>
@@ -52,8 +52,8 @@
                 </view>
             </view>
             <view class="floor">
-                <c-thumbs-up praiseNums="{{7}}" />
-                <c-comment commentNums="{{10}}" />
+                <c-thumbs-up praiseNum="{{7}}" />
+                <c-comment commentNum="{{10}}" />
             </view>
         </view>
     </view>

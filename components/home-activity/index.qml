@@ -14,7 +14,7 @@
             </view>
         </view>
         <view class="floor">
-            <c-floor commentNums="{{2}}" />
+            <c-floor commentNum="{{2}}" />
         </view>
     </view>
 </view>

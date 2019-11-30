@@ -7,7 +7,7 @@
             <text>爱情这东西，时间很关键。认识得太早或太晚，都不行。</text>
         </view>
         <view class="floor">
-            <c-floor commentNums="{{5}}" />
+            <c-floor commentNum="{{5}}" />
         </view>
     </view>
     <view class="recommend-container">
@@ -21,7 +21,7 @@
             <l-tag plain="{{true}}" shape="circle" font-color="#4983d0">树洞一下</l-tag>
         </view>
         <view class="floor">
-            <c-floor commentNums="{{3}}" />
+            <c-floor commentNum="{{3}}" />
         </view>
     </view>
 </view>
