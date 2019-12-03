@@ -1,0 +1,98 @@
+.container {
+    width: 750rpx;
+    text-align: left !important;
+}
+
+.textarea {
+    width: 750rpx !important;
+}
+
+.tag-container {
+    margin-top: 30rpx;
+    display: flex;
+    word-break: keep-all;
+}
+
+.first-tag {
+    display: flex;
+}
+
+.arrow {
+    width: 20rpx;
+    height: 15rpx;
+}
+
+.line {
+    border-right: 1px solid #8a8a8a;
+    margin: 0 20rpx;
+}
+
+.sub-tag-container {
+    overflow-x: auto;
+    display: flex;
+}
+
+.sub-tag-container > l-tag {
+    margin-right: 20rpx;
+}
+
+.position {
+    margin-top: 30rpx;
+    position: absolute;
+    left: 0;
+    font-size: 28rpx;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-color: #000000;
+}
+
+.position > image {
+    width: 40rpx;
+    height: 40rpx;
+}
+
+.arrow {
+    margin-top: 4rpx;
+}
+
+.selected-tag {
+    margin-top: 30rpx;
+    background-color: #4983d0 !important;
+    position: absolute;
+    right: 0;
+}
+
+.city-picker {
+    margin-top: 90rpx;
+}
+
+.image-container {
+    margin-top: 20rpx;
+}
+
+.submit {
+    position: absolute;
+    right: 20rpx;
+    margin-top: 86rpx;
+    border-bottom: 1px solid #8a8a8a;
+}
+
+.title-container {
+    width: 750rpx;
+    font-size: 32rpx;
+    border-bottom: 1px solid #f6f6f6;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 16rpx 0;
+}
+
+.title {
+    margin-right: 16rpx;
+    margin-left: 20rpx;
+}
+
+.title-container > input {
+    width: 630rpx;
+}

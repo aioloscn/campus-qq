@@ -3,11 +3,11 @@ import {
     getUserGlobalInfo
 } from "../../utils/common.js"
 import {
-    InformationComment
-} from "../../models/informatiomComment.js"
+    ActivityComment
+} from "../../models/ActivityComment.js"
 
 const regeneratorRuntime = require('../../utils/runtime.js')
-const informationComment = new InformationComment()
+const activityComment = new ActivityComment()
 
 Page({
 
@@ -24,7 +24,7 @@ Page({
     async release(event) {
         const userInfo = getUserGlobalInfo()
         if (userInfo) {
-            const res = await informationComment.release(this.data.item.id, event.detail, userInfo.id)
+            const res = await activityComment.release(this.data.item.id, event.detail, userInfo.id)
             if (res && res.code == 200) {
                 this._showToast(res.msg, 'success')
                 this.getComments()
@@ -47,7 +47,7 @@ Page({
 
     async getComments() {
         const userInfo = getUserGlobalInfo()
-        const res = await informationComment.getComments(this.data.item.id, userInfo ? userInfo.id : null, this.data.pageIndex)
+        const res = await activityComment.getComments(this.data.item.id, userInfo ? userInfo.id : null, this.data.pageIndex)
         console.log(res.data.length)
         if (res && res.code == 200 && res.data.length > 0) {
             this.setData({
@@ -73,7 +73,7 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-        const item = getGlobalInfo('information-detail')
+        const item = getGlobalInfo('activity-detail')
         console.log(item)
         if (item) {
             this.setData({

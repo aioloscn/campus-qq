@@ -1,0 +1,32 @@
+.content-container {
+    width: 690rpx;
+    margin: 20rpx 30rpx;
+}
+.card {
+    width: 690rpx !important;
+}
+
+.title-container {
+    width: 550rpx;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.title {
+    color: #636363;
+    font-size: 36rpx;
+    font-weight: 600;
+    margin-top: 20rpx;
+}
+
+.article {
+    font-size: 26rpx;
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    white-space: normal;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 6;
+}

@@ -6,6 +6,7 @@
 .recommend-container {
     background-color: #ffffff;
     margin-bottom: 10rpx;
+    border-radius: 10px;
 }
 
 .content {
@@ -13,10 +14,6 @@
     padding: 0 30rpx;
     font-size: 32rpx;
     color: #000000;
-}
-
-.contentText {
-
 }
 
 .personal-container {
@@ -59,4 +56,12 @@
 .contentImage {
     width: 230rpx;
     height: 230rpx;
+}
+
+.step {
+    width: 690rpx !important;
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+
 }

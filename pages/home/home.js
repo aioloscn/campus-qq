@@ -14,8 +14,9 @@ Page({
    * 页面的初始数据
    */
   data: {
+    key: 'one',
     information: {},
-    pages: 0,
+    pages: 1,
     currentUserId: -1,
     pageIndex: 0,
     buttonTop: 0,
@@ -24,6 +25,10 @@ Page({
     windowHeight: '',
     isHidden: false,
     scrollTop: 50
+  },
+
+  changeTabs(event) {
+    this.data.key = event.detail.activeKey
   },
 
   tapReleaseBtn(event) {
@@ -45,7 +50,6 @@ Page({
       })
       // 如果已登录传当前用户ID到follow组件中动态控制显示
       // 如果没登录，当用户点击关注时提示登录
-      const userInfo = getUserGlobalInfo()
       if (userInfo) {
         this.setData({
           currentUserId: userInfo.id
@@ -73,8 +77,6 @@ Page({
         })
       }
     })
-
-    this.getInformation()
   },
 
   onPageScroll: function (e) {
@@ -109,7 +111,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    this.getInformation()
   },
 
   /**
@@ -130,7 +132,10 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-
+    if (this.data.key == 'one') {
+      this.getInformation()
+    }
+    wx.stopPullDownRefresh()
   },
 
   /**

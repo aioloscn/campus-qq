@@ -7,6 +7,9 @@
                     followed="{{item.followed}}" fromUid="{{item.fromUid}}" />
     </view>
     <view bind:tap="hideBoard" class="content">
+        <view class="title-container">
+            <text class="title">{{item.title}}</text>
+        </view>
         <view class="contentText">
             <text>{{item.content}}</text>
         </view>

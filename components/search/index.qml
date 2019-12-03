@@ -18,7 +18,7 @@
             </view>
             <view class="tags">
                 <block wx:key="" wx:for="{{historyWords}}">
-                    <l-tag bind:tapping="onConfirm" text="{{item}}" />
+                    <l-tag bind:tapping="onConfirm" text="树洞一下" />
                 </block>
             </view>
         </view>

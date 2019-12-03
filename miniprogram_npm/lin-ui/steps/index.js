@@ -59,6 +59,7 @@ Component({
     _initSteps() {
       const query = wx.createSelectorQuery().in(this);
       query.select('.steps-container').boundingClientRect().exec(res => {
+        console.log(res)
         let steps = this.getRelationNodes('../step/index');
         this.data.length = steps.length;
         if (this.data.length > 0) {

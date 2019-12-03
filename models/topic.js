@@ -9,6 +9,12 @@ class TopicModel extends HTTP {
             url: 'topic/get'
         })
     }
+
+    getActivityTopics() {
+        return this.cRequest({
+            url: 'activity/topic/get'
+        })
+    }
 }
 
 export {TopicModel}

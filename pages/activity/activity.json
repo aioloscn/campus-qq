@@ -4,6 +4,10 @@
     "c-fakeSearch": "/components/fakeSearch/index",
     "c-search": "/components/search/index",
     "c-thumbs-up": "/components/thumbs-up/index",
-    "c-comment": "/components/comment/index"
-  }
+    "c-comment": "/components/comment/index",
+    "c-suspensionBall": "/components/suspensionBall/index",
+    "l-card": "/miniprogram_npm/lin-ui/card/index",
+    "c-activity-content": "/components/activity-content/index"
+  },
+  "enablePullDownRefresh": true
 }

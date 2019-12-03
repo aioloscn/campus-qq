@@ -7,14 +7,15 @@
     "pages/sms/sms",
     "pages/phone/phone",
     "pages/release/release",
-    "pages/information-detail/information-detail"
+    "pages/information-detail/information-detail",
+    "pages/activity-release/activity-release",
+    "pages/activity-detail/activity-detail"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#ffffff",
     "navigationBarTitleText": "i校易点",
-    "navigationBarTextStyle": "black",
-    "enablePullDownRefresh": false
+    "navigationBarTextStyle": "black"
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json",

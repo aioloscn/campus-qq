@@ -1,6 +1,10 @@
 <view class="container" style="text-align: left;">
+    <view class="title-container">
+        <text class="title">标题</text>
+        <input bindinput="inputTitle" focus="true" />
+    </view>
     <l-textarea bind:linconfirm="onConfirm" bind:lininput="inputTextarea" l-class="textarea" border="{{false}}" focus="{{true}}"
-                maxlength="149" indicator="{{true}}" auto-height="{{true}}" placeholder="可以分享你的心情或发布简单的活动吧，#数字#的形式发布群号链接" />
+                maxlength="-1" indicator="{{false}}" placeholder="发布详细活动或文章，#数字#的形式发布群号链接" />
     <view class="image-container">
         <l-image-picker bind:linchange="pickImage" bind:linremove="removeImage" count="9" size-type="compressed" />
     </view>

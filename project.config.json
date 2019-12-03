@@ -65,6 +65,13 @@
 					"pathName": "pages/release/release",
 					"query": "",
 					"scene": ""
+				},
+				{
+					"id": -1,
+					"name": "activity",
+					"pathName": "pages/activity/activity",
+					"query": "",
+					"scene": ""
 				}
 			]
 		}

@@ -6,12 +6,11 @@
 }
 
 .head-portrait {
-    width: 100rpx;
-    height: 100rpx;
+    width: 80rpx;
+    height: 80rpx;
     overflow: hidden;
     border-radius: 50%;
 }
-
 
 .message-top {
     width: 590rpx;

@@ -9,5 +9,6 @@
     "c-home-activity": "/components/home-activity/index",
     "c-suspensionBall": "/components/suspensionBall/index",
     "l-toast": "/miniprogram_npm/lin-ui/toast/index"
-  }
+  },
+  "enablePullDownRefresh": true
 }

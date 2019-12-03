@@ -1,28 +1,31 @@
 Component({
 
     properties: {
-        thumbsUpNum: Number
+        thumbsUpNum: Number,
+        praised: Boolean
     },
 
     data: {
         praised: false,
-        num: 0
+        thumbsUpNum: 0
     },
 
     methods: {
         onPraise(event) {
-            const num = this.properties.thumbsUpNum + 1
+            const thumbsUpNum = this.properties.thumbsUpNum + 1
             this.setData({
                 praised: true,
-                num
+                thumbsUpNum
             })
+            this.triggerEvent('onPraise', this.data.thumbsUpNum)
         },
         cancelPraised(event) {
-            const num = this.properties.thumbsUpNum - 1
+            const thumbsUpNum = this.properties.thumbsUpNum - 1
             this.setData({
                 praised: false,
-                num
+                thumbsUpNum
             })
+            this.triggerEvent('cancelPraised', this.data.thumbsUpNum)
         }
     }
 })

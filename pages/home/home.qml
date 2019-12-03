@@ -14,12 +14,13 @@
             <c-gossip />
         </view>
     </l-tabpanel>
-    <l-tabpanel tab="活动" key="four" slot="four">
+    <l-tabpanel tab="任务" key="four" slot="four">
         <view class="tab-content">
             <c-home-activity />
         </view>
     </l-tabpanel>
 </l-tabs>
-<c-suspensionBall bind:tapReleaseBtn="tapReleaseBtn" ball-class="ball-container" buttonTop="{{buttonTop}}" buttonLeft="{{buttonLeft}}" windowWidth="{{windowWidth}}" windowHeight="{{windowHeight}}" isHidden="{{isHidden}}">
+<c-suspensionBall bind:tapReleaseBtn="tapReleaseBtn" ball-class="ball-container" buttonTop="{{buttonTop}}" buttonLeft="{{buttonLeft}}"
+                  windowWidth="{{windowWidth}}" windowHeight="{{windowHeight}}" isHidden="{{isHidden}}">
     <image slot="img" class="img" src="/images/icon/menu-add.png" />
 </c-suspensionBall>

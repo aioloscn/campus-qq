@@ -9,10 +9,9 @@
             followed="{{item.followed}}" fromUid="{{item.fromUid}}" />
         </view>
         <view class="content">
-            <view class="contentText" bind:tap="entryContent">
-                <text>{{item.content}}</text>
-            </view>
-            <image class="contentImage" wx:key="" wx:for="{{item.imageList}}" wx:for-item="val" src="{{val}}" />
+            <c-information-content item="{{item}}" />
+            <image mode="aspectFill" bindtap="previewImg" class="contentImage" data-index="{{idx}}" wx:for-index="idx"
+                   wx:key="idx" wx:for="{{item.imageList}}" wx:for-item="val" src="{{val}}" />
         </view>
         <view class="tag-container" wx:if="{{!item.topicId==0}}">
             <l-tag plain="{{true}}" shape="circle" font-color="#4983d0">{{item.topicName}}</l-tag>

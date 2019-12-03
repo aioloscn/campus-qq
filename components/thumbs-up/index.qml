@@ -4,5 +4,5 @@
 </view>
 <view wx:if="{{praised}}" bind:tap="cancelPraised" class="container">
     <image class="img" src="/images/icon/praised.png" />
-    <text class="num">{{num}}</text>
+    <text class="num">{{thumbsUpNum}}</text>
 </view>

@@ -7,7 +7,7 @@
             <text>{{content}}</text>
         </view>
         <view class="tag-container">
-            <l-tag plain="{{true}}" shape="circle" font-color="#4983d0">跑腿</l-tag>
+            <l-tag plain="{{true}}" shape="circle" font-color="#4983d0">校园跑腿</l-tag>
             <view class="position-container">
                 <image class="position-img" src="/images/icon/position.png" />
                 <text class="position">成都市金堂县</text>
